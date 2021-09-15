@@ -1,0 +1,24 @@
+<div>
+  <h2 mat-subheader>Contatos</h2>
+  <mat-list>
+    <mat-list-item *ngFor="let item of contacts | orderBy: order : false : true ; index as i " class="contactslist">
+      <h4 mat-line layout="collum" class="contactitens">
+        <a [routerLink]="['/contact', item.id]">
+          {{item.nome}}
+        </a>
+        <a routerLink="/edit/{{item.id}}">
+          <mat-icon >edit</mat-icon>
+        </a>
+        <mat-icon (click)="deleteContact(item.id)" class="deleteIcon">
+          delete
+        </mat-icon>
+      </h4>
+      <mat-divider ></mat-divider>
+    </mat-list-item>
+  </mat-list>
+
+  <!-- Footer -->
+  <footer>
+  </footer>
+</div>
+<router-outlet></router-outlet>

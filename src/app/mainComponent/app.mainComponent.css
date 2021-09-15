@@ -1,0 +1,23 @@
+.contactslist{
+  padding-left: 10%;
+  width: auto;
+}
+.contactitens{
+  display: flex !important;
+  flex-direction: row !important;
+  padding-left: 2% !important;
+}
+a{
+  padding-left: 1%;
+  text-decoration: none;
+  color: inherit;
+  font-weight:normal;
+  display: flex;
+  flex-direction: row;
+}
+h2{
+  margin-left: 3%;
+}
+.deleteIcon{
+  cursor: pointer;
+}

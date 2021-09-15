@@ -1,0 +1,26 @@
+.insertForm {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  align-self: center;
+  margin: 3% auto;
+}
+.divAlignCenter{
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+.example-full-width {
+  width: 100%;
+}
+.example-button-row button{
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);;
+}
+button{
+  background-color: #ff4081;
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 10px;
+  border: 3px solid #ff4081;
+  cursor: pointer;
+}

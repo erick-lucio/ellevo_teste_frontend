@@ -1,0 +1,12 @@
+.headerRow {
+  flex: 1 2 auto;
+
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.headerLink{
+  margin-left: 3%;
+  padding: 5px;
+}
