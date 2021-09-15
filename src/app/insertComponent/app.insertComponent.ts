@@ -20,12 +20,10 @@ export class InsertComponent {
     console.warn('Your order has been submitted', this.checkoutFormInsert.value);
     this.indexedDBServices.saveContact(this.checkoutFormInsert.value)
     .then((resp)=>{
-      console.log(resp)
       this.checkoutFormInsert.reset();
       this.router.navigate(['/']);
     })
     .catch((resp)=>{
-      console.log(resp)
       this.checkoutFormInsert.reset();
     })
   }

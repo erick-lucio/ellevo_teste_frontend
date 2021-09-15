@@ -17,7 +17,6 @@ export class MainComponent {
   order: string = 'nome';
 
   deleteContact(key:string){
-    console.log("delete " + key)
     this.indexedDBServices.removeContact(key)
     .then((resp)=>{
       this.updateContact()
@@ -31,13 +30,11 @@ export class MainComponent {
   updateContact(){
     this.indexedDBServices.getAllContacts()
     .then((resp:[])=>{
-      console.log(resp)
       this.contacts = []
       try {
         resp.forEach((item)=>{
           this.contacts.push(item);
         })
-        console.log(this.contacts)
       } catch (error) {
 
       }

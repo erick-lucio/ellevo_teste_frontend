@@ -41,7 +41,6 @@ export class AppModule {
         if(ev instanceof NavigationEnd) {
           this.indexedDBServices.getLogged()
             .then((resp)=>{
-              console.log(resp)
               if(resp != 'true'){
                 this.router.navigate(['/login']);
               }

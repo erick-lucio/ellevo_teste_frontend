@@ -19,21 +19,20 @@ export class IndexedDBServices{
     })
     this.dbLogged = await openDB<MyDBLogged>('db_logged',1,{
       upgrade(db){
-        db.createObjectStore('logged',{ autoIncrement : true })
+        db.createObjectStore('logged')
       }
     })
   }
   saveContact(contact: Contact, key?: number){
-    console.log("key " + key)
-    console.log(contact)
-    contact.id = key
+    if(key != undefined){
+      contact.id = key
+    }
     if(contact.nome.trim() != "" && contact.email.trim() != "" && contact.telefone.trim() != ""){
       return this.db.put('contacts-store',contact)
     }
 
   }
   removeContact(key:any){
-    console.log(key)
     return this.db.delete('contacts-store',IDBKeyRange.only(key))
   }
   getAllContacts(){

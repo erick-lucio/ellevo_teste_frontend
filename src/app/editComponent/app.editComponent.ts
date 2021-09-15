@@ -33,12 +33,9 @@ export class EditComponent {
     this.contactId = contactId
     this.indexedDBServices.saveContact(this.checkoutFormEdit.value,this.contactId)
     .then((resp)=>{
-      console.log(resp)
     })
     .then((resp)=>{
-      console.log(resp)
     })
-    console.log(this.checkoutFormEdit.value)
     this.checkoutFormEdit.reset();
     this.router.navigate(['/']);
   }
@@ -66,9 +63,8 @@ export class EditComponent {
       });
 
     })
-      .catch((resp)=>{
-        console.log(resp)
-      })
+    .catch((resp)=>{
+    })
   }
 }
 

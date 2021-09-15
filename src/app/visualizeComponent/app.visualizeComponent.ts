@@ -55,7 +55,6 @@ export class VisualizeComponent {
 
       })
       .catch((resp)=>{
-        console.log(resp)
       })
   }
 }

@@ -8,7 +8,7 @@
   padding-left: 2% !important;
 }
 a{
-  padding-left: 1%;
+  padding-left: 2%;
   text-decoration: none;
   color: inherit;
   font-weight:normal;
@@ -16,7 +16,7 @@ a{
   flex-direction: row;
 }
 h2{
-  margin-left: 3%;
+  margin-left: 5%;
 }
 .deleteIcon{
   cursor: pointer;

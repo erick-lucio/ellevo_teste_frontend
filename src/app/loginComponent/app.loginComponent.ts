@@ -22,19 +22,16 @@ export class LoginComponent {
   });
 
   onSubmit(): void {
-    console.log('Your order has been submitted', this.checkoutFormLogin.value);
     let body = JSON.stringify(this.checkoutFormLogin.value)
-    //
-    //this.router.navigate(['/']);
-    console.log(body)
-    var sucess = this.http.post(this.url,body,{
+
+    this.http.post(this.url,body,{
       headers:{
         'Access-Control-Allow-Origin': '*',
         'Content-Type':'application/json'
       },
       responseType:"text"
     }).subscribe(res=>{
-      if(res == "sucess"){
+      if(res == "sucess" ){
         this.logged = true
         this.indexedDBServices.setLogged('true')
         .then(()=>{
@@ -42,12 +39,13 @@ export class LoginComponent {
           this.router.navigate(['/']);
         })
       }else{
-        this.logged = false
+        this.indexedDBServices.setLogged('false')
       }
-      //console.log(res)
+
     })
 
     this.checkoutFormLogin.reset();
+
 
   }
 
@@ -58,6 +56,5 @@ export class LoginComponent {
     private http: HttpClient,
     private indexedDBServices:IndexedDBServices
   ) {}
-
 
 }
